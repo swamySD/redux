@@ -1,0 +1,19 @@
+.ccc{
+    height:100vh;
+    
+position: relative;
+    background-color: aquamarine;
+}
+.input-container{
+padding: 5px;
+width: 80%;
+position: absolute;
+z-index:3;
+background-color: bisque;
+height: 90%;
+
+}
+img{
+   
+    z-index: 6;
+}
