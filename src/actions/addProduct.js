@@ -4,6 +4,7 @@ export const addPostsData=()=>{
     // https://redux-384e0-default-rtdb.firebaseio.com/cart.json
      axios.post('https://fakestoreapi.com/products',{
         method:"POST",
+       
         body:JSON.stringify(
             {
                 title: 'test product',
@@ -14,13 +15,18 @@ export const addPostsData=()=>{
             }
         ) 
      })
-    .then(res=>res.data)
-    .then(jsonData=>{
-        dispatch({type:'LOADED',payload:jsonData})
-        }).catch(error=>{
-            dispatch({type:'ERROR',payload:error})
-        })
-    }
+                 .then(res=>res.data)
+                 .then(jsonData=>{
+                     dispatch({type:'LOADED',payload:jsonData})
+                 }).catch(error=>{
+                     dispatch({type:'ERROR',payload:error})
+             })
+     
+     }
  }
-//store.dispatch(getPostsData)
+     
+     
+     
+ //store.dispatch(getPostsData)
+ 
  export default  addPostsData; 
