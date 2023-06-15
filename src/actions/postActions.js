@@ -1,8 +1,8 @@
 export const getPostsData=()=>{
-    return (dispatch)=>{
+    return async(dispatch)=>{
     dispatch({type:'PENDING'})
     
-    fetch('https://fakestoreapi.com/products')
+    await fetch('https://fakestoreapi.com/products')
                 .then(res=>res.json())
                 .then(jsonData=>{
                     dispatch({type:'SUCCESS',payload:jsonData})
